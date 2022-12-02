@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.list {
+    overflow: hidden;
+}
+
+.list-checked {
+    max-height: 100%;
+    transition: max-height 0.25s ease-in;
+}
+
+.burger-btn {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.burger-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 20px;
+    background-color: black;
+    height: 2px;
+}
+
+.burger-btn span {
+    position: absolute;
+    top: 9px;
+    width: 20px;
+    background-color: black;
+    height: 2px;
+}
+
+.burger-btn:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    background-color: black;
+    height: 2px;
+}

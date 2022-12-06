@@ -1,19 +1,29 @@
 import React from 'react';
 
-const Menu = ({header, items, active, setActive}) => {
+const Menu = ({links, products, active, setActive}) => {
     return (
         <div className={active ? 'menu active' : 'menu'} onClick={() => setActive(false)}>
             <div className="blur" />
-            <div className="menu__content" onClick={(e) => e.stopPropagation()}>
-                <div className="menu__header">{header}</div>
-                <ul>
-                    {items.map(item =>
-                        <li>
-                            <a href={item.href} className="text-white">{item.value}</a>
-                            <span className="material-icons">{item.icon}</span>
-                        </li>
-                    )}
-                </ul>
+            <div className="menu__content grid grid-cols-7 text-white" onClick={(e) => e.stopPropagation()}>
+                <div className="menu__left col-span-3 uppercase">
+                    <ul className="space-y-2">
+                        {products.map((product, i) =>
+                            <li key={i}>
+                                <a href={product.href} className="text-white">{product.value}</a>
+                            </li>
+                        )}
+                    </ul>
+                </div>
+                <div className="menu__right col-span-4">
+                    <ul className="space-y-2">
+                        {links.map((link, i) =>
+                            <li key={i} className="flex">
+                                <span>{link.icon}</span>
+                                <span className="pl-2">{link.value}</span>
+                            </li>
+                        )}
+                    </ul>
+                </div>
             </div>
         </div>
     );

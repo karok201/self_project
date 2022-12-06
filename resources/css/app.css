@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.list {
-    overflow: hidden;
+nav {
+    background: #2b2b2b;
 }
 
 .list-checked {
@@ -23,7 +23,7 @@
     position: absolute;
     top: 0;
     width: 20px;
-    background-color: black;
+    background-color: white;
     height: 2px;
 }
 
@@ -31,7 +31,7 @@
     position: absolute;
     top: 9px;
     width: 20px;
-    background-color: black;
+    background-color: white;
     height: 2px;
 }
 
@@ -40,6 +40,6 @@
     position: absolute;
     bottom: 0;
     width: 20px;
-    background-color: black;
+    background-color: white;
     height: 2px;
 }

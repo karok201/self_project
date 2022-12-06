@@ -1,0 +1,95 @@
+/*.menu-btn__burger {*/
+/*    width: 40px;*/
+/*    height: 3px;*/
+/*    background: #fff;*/
+/*    border-radius: 5px;*/
+/*    transition: all .3s ease-in-out;*/
+/*}*/
+
+/*.menu-btn__burger::before,*/
+/*.menu-btn__burger::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    width: 40px;*/
+/*    height: 3px;*/
+/*    background: #fff;*/
+/*    border-radius: 5px;*/
+/*    transition: all .3s ease-in-out;*/
+/*}*/
+
+/*.menu-btn__burger::before {*/
+/*    transform: translateY(-16px);*/
+/*}*/
+/*.menu-btn__burger::after {*/
+/*    transform: translateY(16px);*/
+/*}*/
+
+/*.menu-btn.open .menu-btn__burger {*/
+/*    transform: translateX(-50px);*/
+/*    background: transparent;*/
+/*    box-shadow: none;*/
+/*}*/
+
+/*.menu-btn.open .menu-btn__burger::before {*/
+/*    transform: rotate(45deg) translate(35px, -35px);*/
+/*}*/
+/*.menu-btn.open .menu-btn__burger::after {*/
+/*    transform: rotate(-45deg) translate(35px, 35px);*/
+/*}*/
+
+$buttonWidth: 26px;
+$buttonHeight: 20px;
+$buttonColor: darken(#fff, 15%);
+$lineThickness: 2px;
+$transitionSpeed: .25s;
+$transitionEasing: ease-in-out;
+
+// Demo
+   .menu-toggle {
+       position: relative;
+       display: block;
+       width: $buttonWidth;
+       height: $buttonHeight;
+
+       background: transparent;
+       border-top: $lineThickness solid;
+       border-bottom: $lineThickness solid;
+
+       color: $buttonColor;
+       font-size: 0;
+
+       transition: all $transitionSpeed $transitionEasing;
+
+&:before,
+&:after {
+     content: '';
+     display: block;
+     width: 100%;
+     height: $lineThickness;
+
+     position: absolute;
+     top: 50%;
+     left: 50%;
+
+     background: currentColor;
+
+     transform: translate(-50%, -50%);
+     transition: transform $transitionSpeed $transitionEasing;
+ }
+}
+
+button:hover {
+    color: lighten($buttonColor, 15%);
+}
+
+button.is-active {
+    border-color: transparent;
+
+&:before {
+     transform: translate(-50%, -50%) rotate(45deg);
+ }
+
+&:after {
+     transform: translate(-50%, -50%) rotate(-45deg);
+ }
+}

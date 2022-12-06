@@ -15,43 +15,38 @@
 .blur {
     width: 100vw;
     height: 100vh;
-    left: 27%;
+    left: 30%;
     backdrop-filter: blur(2px);
     position: absolute;
 }
 
 .menu__content {
-    width: 27%;
+    padding-top: 19px;
+    width: 30%;
     height: 100%;
     background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     transition: all 0.8s;
 }
 
-.menu__header {
-    padding: 10px;
-    font-size: 2rem;
+.menu__left {
+    padding: 70px 0 0 25px;
+    font-size: 1.3rem;
     color: white;
-    border-bottom: 1px solid white;
-    width: 100px;
-    text-align: center;
+    font-family: "Ubuntu Thin", serif;
+    background: #181818;
 }
 
-ul li a {
+.menu__right {
+    padding: 70px 0 0 25px;
+    font-size: 1.3rem;
     color: white;
-    text-decoration: none;
-
+    background: #212121;
 }
 
-ul li {
-    display: flex;
-    align-items: center;
-}
-
-ul {
-    text-align: center;
+.menu__right ul {
+    border-bottom: 0.1rem solid;
+    width: 95%;
+    padding-bottom: 10px;
 }
 
 @media screen and (max-width: 768px) {

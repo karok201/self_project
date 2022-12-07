@@ -4,6 +4,7 @@
     height: 100vh;
     transform: translatex(-130%);
     transition: all 0.2s;
+    z-index: 10;
 }
 
 .auth-menu.active {

@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, {useRef, useState} from "react";
 import Layout from "@/Layouts/Layout";
 
 export default function Welcome({user, categories}) {
@@ -7,10 +7,16 @@ export default function Welcome({user, categories}) {
         return acc;
     }, {});
 
+    const [elActive, setElActive] = useState(null);
+
     console.log(categories);
 
-    const handleClick = id =>
+    const handleClick = id => {
+        setElActive({id: id})
         refs[id].current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
+    }
+
+    console.log(elActive)
 
     return (
         <Layout user={user}>
@@ -21,7 +27,9 @@ export default function Welcome({user, categories}) {
                             <li key={item.id} className="py-2">
                                 <button
                                     type="button"
-                                    className="font-bold border-[1px] border-gray-200 mx-auto text-gray-200 rounded-full flex items-center justify-center font-mono h-11 w-11"
+                                    className={
+                                        `font-bold border-[1px] border-gray-200 mx-auto text-gray-200 rounded-full flex items-center justify-center font-mono h-11 w-11 ${item.id === elActive?.id ? 'bg-lime-500' : ''}`
+                                    }
                                     onClick={() => handleClick(item.id)}
                                 >
                                     {item.title[0]}

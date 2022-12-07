@@ -3,11 +3,13 @@
     width: 100vw;
     height: 100vh;
     transform: translatex(-130%);
-    transition: all 0.6s;
+    transition: all 0.3s;
 }
 
 .auth-menu.active {
     transform: translateX(0);
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .blur {
@@ -25,7 +27,7 @@
     overflow-y: scroll;
     background-color: #2b2b2b;
     font-family: "Ubuntu Thin", serif;
-    transition: all 0.8s;
+    transition: all 0.5s;
 }
 
 @media screen and (max-width: 768px) {

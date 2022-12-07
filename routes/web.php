@@ -30,9 +30,11 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
-    Route::post('/product/create', [ProductController::class, 'store']);
-    Route::get('/product/{product}/edit', [ProductController::class, 'edit'])->name('product.edit');
+    Route::middleware('admin')->prefix('/product')->group(function () {
+        Route::get('/create', [ProductController::class, 'create'])->name('product.create');
+        Route::post('/create', [ProductController::class, 'store']);
+        Route::get('/{product}/edit', [ProductController::class, 'edit'])->name('product.edit');
+    });
 });
 
 require __DIR__.'/auth.php';

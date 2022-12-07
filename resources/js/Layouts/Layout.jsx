@@ -16,6 +16,8 @@ import Nav from "@/Components/Landing/Nav";
 import Footer from "@/Components/Landing/Footer";
 import LoginMenu from "@/Components/LoginMenu";
 import RegisterMenu from "@/Components/RegisterMenu";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Layout({ user, children }) {
     const [menuActive, setActive] = useState(false);
@@ -69,9 +71,12 @@ export default function Layout({ user, children }) {
                 setRegisterMenuActive={setRegisterMenuActive}
             />
 
-            <main className="profile bg-[#232323] min-h-screen items-center">{children}</main>
+            <main className="profile bg-[#232323] min-h-screen items-center">
+                {children}
+            </main>
 
             <Footer />
+            <ToastContainer />
         </>
     );
 }

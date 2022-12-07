@@ -58,6 +58,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return Inertia::render('Welcome', $user);
+        return redirect()->route('profile.edit');
     }
 }

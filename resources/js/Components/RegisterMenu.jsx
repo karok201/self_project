@@ -30,7 +30,7 @@ const RegisterMenu = ({authMenuActive, setAuthMenuActive, registerMenuActive, se
     return (
         <div className={`${registerMenuActive ? 'auth-menu active' : 'auth-menu'}`} onClick={() => setRegisterMenuActive(false)}>
             <div className="auth-menu__content text-white flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
-                <div className="w-[90%] mt-[-10rem] lg:mt-0 lg:w-[50%]">
+                <div className="w-[90%] lg:mt-0 lg:w-[50%]">
                     <div className="flex justify-between text-[1.4rem] lg:text-[2.2rem] uppercase">
                         <span>Регистрация</span>
                         <button className="bg-[#ff8a00] px-3 py-1" onClick={() => {

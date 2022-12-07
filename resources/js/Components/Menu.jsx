@@ -3,7 +3,6 @@ import React from 'react';
 const Menu = ({links, products, active, setActive}) => {
     return (
         <div className={active ? 'menu active' : 'menu'} onClick={() => setActive(false)}>
-            <div className="blur" />
             <div className="menu__content grid grid-cols-7 text-white" onClick={(e) => e.stopPropagation()}>
                 <div className="menu__left col-span-3 uppercase">
                     <ul className="space-y-2">

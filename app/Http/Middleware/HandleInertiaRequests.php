@@ -37,7 +37,7 @@ class HandleInertiaRequests extends Middleware
     public function share(Request $request)
     {
         $user = Auth::user();
-        $categories = Category::all();
+        $categories = Category::query()->with(['products'])->get();
 
         return array_merge(parent::share($request), [
             'user' => $user,

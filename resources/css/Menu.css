@@ -1,5 +1,6 @@
 .menu {
     position: fixed;
+    z-index: 10;
     width: 100vw;
     height: 100vh;
     top: 50px;
@@ -10,14 +11,6 @@
 
 .menu.active {
     transform: translateX(0);
-}
-
-.blur {
-    width: 100vw;
-    height: 100vh;
-    left: 30%;
-    backdrop-filter: blur(2px);
-    position: absolute;
 }
 
 .menu__content {
@@ -52,8 +45,5 @@
 @media screen and (max-width: 768px) {
     .menu__content {
         width: 100%;
-    }
-    .blur {
-        backdrop-filter: none;
     }
 }

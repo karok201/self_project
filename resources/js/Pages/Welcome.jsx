@@ -1,7 +1,11 @@
 import React, {useRef, useState} from "react";
 import Layout from "@/Layouts/Layout";
+import {PlusCircleIcon} from "@heroicons/react/24/outline";
+import {Inertia} from "@inertiajs/inertia";
+import {InertiaLink} from "@inertiajs/inertia-react";
 
 export default function Welcome({user, categories}) {
+
     const refs = categories.reduce((acc, value) => {
         acc[value.id] = React.createRef();
         return acc;
@@ -9,19 +13,24 @@ export default function Welcome({user, categories}) {
 
     const [elActive, setElActive] = useState(null);
 
-    console.log(categories);
-
     const handleClick = id => {
         setElActive({id: id})
         refs[id].current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
     }
 
-    console.log(elActive)
+    const addToBasket = (product) => {
+        let products = localStorage.getItem('basket')
+            ? JSON.parse(localStorage.getItem('basket'))
+            : []
+        ;
+        localStorage.setItem('basket', JSON.stringify([...products, product]))
+        Inertia.get(route('welcome'))
+    }
 
     return (
         <Layout user={user}>
             <div className="grid grid-cols-7 min-h-screen">
-                <div className="bg-[#272727] fixed w-[14.3%] min-h-screen">
+                <div className="bg-[#193073] fixed w-[14.3%] min-h-screen">
                     <ul>
                         {categories.map(item => (
                             <li key={item.id} className="py-2">
@@ -55,17 +64,20 @@ export default function Welcome({user, categories}) {
                                                  className="h-20"
                                             />
                                         </div>
-                                        <div className="space-y-6">
+                                        <div className="space-y-6 w-32">
                                             <div>{product.title}</div>
                                             <div>
                                                 {product.weight !== null
-                                                    ? product.weight + ' г'
+                                                    ? product.weight + ' г '
                                                     : '1 шт'
                                                 }
                                                 /
-                                                <span className="font-bold">{product.price} р</span>
+                                                <span className="font-bold"> {product.price} р</span>
                                             </div>
                                         </div>
+                                        <InertiaLink className="flex items-center" href={route('product', product.id)}>
+                                            <PlusCircleIcon className="h-10 cursor-pointer hover:text-lime-500 transition"/>
+                                        </InertiaLink>
                                     </div>
                                 ))}
                             </li>

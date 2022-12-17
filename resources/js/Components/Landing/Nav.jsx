@@ -6,7 +6,7 @@ import {Link, useForm} from "@inertiajs/inertia-react";
 const Nav = ({ menuActive, setActive, authMenuActive, setAuthMenuActive, user }) => {
     const {get} = useForm();
     return (
-        <nav className="px-6 h-[4.3rem] flex items-center justify-between text-white sticky top-0 z-50 border-b-[1px] border-zinc-600">
+        <nav className="px-6 h-[4.3rem] flex items-center justify-between text-white fixed top-0 z-50 min-w-full border-b-[1px] border-zinc-600">
             <div className='cursor-pointer' onClick={() => {
                 setActive(!menuActive);
             }}>

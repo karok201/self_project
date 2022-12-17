@@ -33,7 +33,7 @@ const RegisterMenu = ({authMenuActive, setAuthMenuActive, registerMenuActive, se
                 <div className="w-[90%] lg:mt-0 lg:w-[50%]">
                     <div className="flex justify-between text-[1.4rem] lg:text-[2.2rem] uppercase">
                         <span>Регистрация</span>
-                        <button className="bg-[#ff8a00] px-3 py-1" onClick={() => {
+                        <button className="bg-[#16a34a] px-3 py-1" onClick={() => {
                             setRegisterMenuActive(!registerMenuActive);
                             setAuthMenuActive(!authMenuActive);
                         }}>Вход</button>
@@ -55,7 +55,7 @@ const RegisterMenu = ({authMenuActive, setAuthMenuActive, registerMenuActive, se
                         </div>
                         <button
                             type="submit"
-                            className={`mt-12 p-3 bg-[#ff8a00] w-full uppercase text-[1.1rem] lg:text-[1.7rem]`}
+                            className={`mt-12 p-3 bg-[#16a34a] w-full uppercase text-[1.1rem] lg:text-[1.7rem]`}
                             data-tip
                             data-for="register"
                         >

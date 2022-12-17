@@ -9,7 +9,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 use Inertia\Inertia;
+use Inertia\Response;
 
 class ProductController extends Controller
 {
@@ -69,17 +71,20 @@ class ProductController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Models\Product  $product
-     * @return \Illuminate\Http\Response
+     * @return \Inertia\Response
      */
     public function show(Product $product)
     {
-        //
+        return Inertia::render('Product', [
+            'product' => $product
+        ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Product  $product
+     * @param Product $product
+     * @return Response
      */
     public function edit(Product $product)
     {

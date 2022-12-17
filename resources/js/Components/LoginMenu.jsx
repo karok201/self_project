@@ -52,7 +52,7 @@ const LoginMenu = ({authMenuActive, setAuthMenuActive, registerMenuActive, setRe
                 <div className="w-[90%] lg:mt-0 lg:w-[50%]">
                     <div className="flex justify-between text-[1.4rem] lg:text-[2.2rem] uppercase">
                         <span>Вход</span>
-                        <button className="bg-[#ff8a00] px-3 py-1" onClick={() => {
+                        <button className="bg-[#16a34a] px-3 py-1" onClick={() => {
                             setRegisterMenuActive(!registerMenuActive);
                             setAuthMenuActive(!authMenuActive);
                         }}>Регистрация</button>
@@ -67,7 +67,7 @@ const LoginMenu = ({authMenuActive, setAuthMenuActive, registerMenuActive, setRe
                             ? <div className="mx-aut pt-2 text-red-500 text-[1.5rem]">Неверен логин или пароль</div>
                             : null
                         }
-                        <button type="submit" className="mt-10 p-3 bg-[#ff8a00] w-full uppercase text-[1.1rem] lg:text-[1.7rem]">
+                        <button type="submit" className="mt-10 p-3 bg-[#16a34a] w-full uppercase text-[1.1rem] lg:text-[1.7rem]">
                             Войти
                         </button>
                     </form>
@@ -86,7 +86,7 @@ const LoginMenu = ({authMenuActive, setAuthMenuActive, registerMenuActive, setRe
                                 placeholder={'Введите номер телефона'}
                                 className="w-full text-[1.5rem] lg:text-[2.3rem] placeholder-amber-50 pt-8 bg-transparent border-transparent focus:border-transparent focus:ring-0 focus:border-b-[1px] focus:border-b-orange-500 border-b-[1px] border-b-zinc-400"
                             />
-                            <button type="submit" className="mt-10 p-3 bg-[#ff8a00] w-full uppercase text[1.1rem] lg:text-[1.7rem]">
+                            <button type="submit" className="mt-10 p-3 bg-[#16a34a] w-full uppercase text[1.1rem] lg:text-[1.7rem]">
                                 Получить пароль
                             </button>
                         </form>

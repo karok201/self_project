@@ -20,10 +20,10 @@ use Inertia\Inertia;
 
 Route::get('/', [ProductController::class, 'index'])
     ->name('welcome');
-
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/product/{product}', [ProductController::class, 'show'])
+    ->name('product');
+Route::get('/basket', [HomeController::class, 'basket'])
+    ->name('basket');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

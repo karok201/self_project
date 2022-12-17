@@ -71,7 +71,7 @@ export default function Layout({ user, children }) {
                 setRegisterMenuActive={setRegisterMenuActive}
             />
 
-            <main className="profile bg-[#232323] min-h-screen items-center">
+            <main className="pt-[4.3rem] profile bg-[#0c193f] min-h-screen items-center overflow-hidden">
                 {children}
             </main>
 

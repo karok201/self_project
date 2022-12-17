@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 nav {
-    background: #2b2b2b;
+    background: #1d4ed8;
 }
 
 .list-checked {
@@ -42,4 +42,24 @@ nav {
     width: 20px;
     background-color: white;
     height: 2px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #365099;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #a0b8ff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #5e78c6;
 }

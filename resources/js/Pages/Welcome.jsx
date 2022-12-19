@@ -30,7 +30,7 @@ export default function Welcome({user, categories}) {
     return (
         <Layout user={user}>
             <div className="grid grid-cols-7 min-h-screen">
-                <div className="bg-[#193073] fixed w-[14.3%] min-h-screen">
+                <div className="bg-[#237C6C] fixed w-[14.3%] min-h-screen">
                     <ul>
                         {categories.map(item => (
                             <li key={item.id} className="py-2">
@@ -48,7 +48,7 @@ export default function Welcome({user, categories}) {
                     </ul>
                 </div>
                 <div className="col-span-1" />
-                <div className="col-span-6 bg-gray-900">
+                <div className="col-span-6 bg-[#013F4E]">
                     <ul>
                         {categories.map(item => (
                             <li

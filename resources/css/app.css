@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 nav {
-    background: #1d4ed8;
+    background: #0BA5BE;
 }
 
 .list-checked {
@@ -50,13 +50,13 @@ nav {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #365099;
+    background: #CFCBC8;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
     border-radius: 5px;
-    background: #a0b8ff;
+    background: lightslategray;
 }
 
 /* Handle on hover */

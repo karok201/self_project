@@ -46,7 +46,7 @@ export default function Profile({user}) {
                         className="w-full px-4 text-[1.5rem] lg:text-[2.3rem] placeholder-amber-50 bg-transparent border-transparent focus:border-transparent focus:ring-0"
                     />
                 </div>
-                <button type="submit" className="mt-12 p-3 bg-[#ff8a00] w-full uppercase text[1.1rem] lg:text-[1.7rem]">
+                <button type="submit" className="mt-12 p-3 bg-[#16a34a] w-full uppercase text[1.1rem] lg:text-[1.7rem]">
                     Сохранить
                 </button>
             </form>
